@@ -11,8 +11,7 @@ def server_program():
     conn, address = server_socket.accept() # accept new connection
     print("Connection from: " + str(address))
     while True:
-        # receive data stream. it won't accept data packet greater than
-        1024 bytes
+        # receive data stream. it won't accept data packet greater than 1024 bytes
         data = conn.recv(1024).decode()
         if not data:
         # if data is not received break
